@@ -2,26 +2,12 @@ import time
 
 import requests
 
-BASE_URL = "https://api.hh.ru"
-EMPLOYER_IDS: list[int] = [
-    80,  # Альфа-Банк
-    3529,  # Сбер
-    78638,  # Тинькофф
-    3776,  # МТС
-    1740,  # Яндекс
-    2748,  # Ozon
-    2180,  # ВТБ
-    649691,  # Wildberries
-    9392522,  # VK (Mail.ru Group)
-    3127,  # Tele2
-]
+from src.config import BASE_URL, EMPLOYER_IDS
 
 
 def get_employers_with_vacancies() -> list[dict[str, any]]:
-    """Получает данные о работодателях и их вакансиях с hh.ru.
-
-    Returns:
-        Список словарей, содержащих данные о работодателях и их вакансиях.
+    """
+    Получает данные о работодателях и их вакансиях с hh.ru.
     """
     employers_data: list[dict[str, any]] = []
 
