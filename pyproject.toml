@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "hh-vacancies-project"
+version = "0.1.0"
+description = ""
+authors = ["gvia <gritcaev.vv@gmail.com>"]
+readme = "README.md"
+packages = [{include = "hh_vacancies_project"}]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
