@@ -1,7 +1,7 @@
-from src.create_db import create_database_and_tables
-from src.hh_api import get_employers_with_vacancies
-from src.db_manager import DBManager
 from src.config import DB_NAME
+from src.create_db import create_database_and_tables
+from src.db_manager import DBManager
+from src.hh_api import get_employers_with_vacancies
 from src.user_interface import handle_user_input
 
 

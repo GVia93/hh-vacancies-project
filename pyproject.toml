@@ -21,6 +21,7 @@ requests = "^2.32.3"
 dotenv = "^0.9.9"
 psycopg2-binary = "^2.9.10"
 pytest = "^8.3.5"
+requests-mock = "^1.12.1"
 
 [tool.mypy]
 disallow_untyped_defs = true

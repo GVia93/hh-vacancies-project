@@ -57,9 +57,9 @@ class DBManager:
             SELECT e.name, COUNT(v.vacancy_id)
             FROM employers e
             LEFT JOIN vacancies v ON e.employer_id = v.employer_id
-            GROUP BY e.name
+            GROUP BY e.employer_id, e.name
             ORDER BY e.name;
-        """
+            """
         )
         return self.cur.fetchall()
 
@@ -92,7 +92,7 @@ class DBManager:
         """
         )
         result = self.cur.fetchone()
-        return result[0] if result and result[0] else 0.0
+        return float(result[0]) if result and result[0] else 0.0
 
     def get_vacancies_with_higher_salary(self) -> list[dict[str, any]]:
         """
